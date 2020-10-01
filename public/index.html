@@ -26,9 +26,16 @@
         );
 
         socket.emit('mensaje', { nombre: 'german'})
-        socket.on('mensaje ', function( payload){
-            console.log('escuchando', payload);
+
+        socket.on('nuevo-mensaje', function( payload){
+            console.log('EEscuchando', payload);
+        }); 
+
+        socket.on('active-bands', function( bands ){
+
+            console.table( bands );            
         });
+
 
     </script>   
 </body>
